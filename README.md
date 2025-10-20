@@ -1,6 +1,9 @@
 # hbd_carrybike
 Carry Bike Resource by Honeybadger Development
 
+# Dependencies
+[Lation UI](https://lationscripts.com/product/modern-ui) (Optional)
+
 # Discord
 
 https://discord.gg/qGa4ngpgTg

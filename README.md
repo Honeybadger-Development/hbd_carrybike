@@ -5,6 +5,8 @@ Carry Bike Resource by Honeybadger Development
 
 https://discord.gg/qGa4ngpgTg
 
+[Preview](https://streamable.com/rcjviu)
+
 <!-- insert into qbx_radialmenu or use in whatever way you want, to trigger it  -->
 
 Event:

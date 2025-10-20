@@ -16,8 +16,8 @@ Event:
 qbx_radialmenu
 ```lua
 {
-    id = 'pittimer',
-    icon = 'car-burst',
-    label = 'Activate PIT-timer',
-    event = 'hbd_pittimer:PitTimer',
+    id = 'pickupbike',
+    icon = 'car',
+    label = 'Pick Up Bike',
+    event = 'hbd:carrybike',
 },

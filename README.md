@@ -2,7 +2,7 @@
 Carry Bike Resource by Honeybadger Development
 
 # Dependencies
-[Lation UI](https://lationscripts.com/product/modern-ui) (Optional)
+[Lation UI](https://lationscripts.com/product/modern-ui)
 
 # Discord
 

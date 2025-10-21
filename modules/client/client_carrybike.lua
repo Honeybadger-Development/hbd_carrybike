@@ -25,7 +25,7 @@ CreateThread(function()
         defaultKey = 'G',
         onPressed = function()
             if carryingBike and carriedBike and DoesEntityExist(carriedBike) and IsEntityAttached(carriedBike) then
-                local ped = PlayerPedId()
+                local ped = cache.ped
                 DetachEntity(carriedBike, true, true)
                 SetVehicleOnGroundProperly(carriedBike)
                 ClearPedTasksImmediately(ped)
@@ -45,7 +45,7 @@ CreateThread(function()
 end)
 
 RegisterNetEvent('hbd:carrybike', function()
-    local ped = PlayerPedId()
+    local ped = cache.ped
     local coords = GetEntityCoords(ped)
     local vehicle = GetClosestVehicle(coords, 5.0, 0, 71)
 
@@ -112,7 +112,7 @@ end)
 AddEventHandler('onResourceStop', function(resource)
     if resource == GetCurrentResourceName() then
         carryThreadActive = false
-        local ped = PlayerPedId()
+        local ped = cache.ped
 
         if carryingBike and carriedBike and DoesEntityExist(carriedBike) then
             DetachEntity(carriedBike, true, true)

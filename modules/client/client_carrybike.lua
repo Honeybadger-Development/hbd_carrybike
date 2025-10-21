@@ -15,10 +15,7 @@ end
 
 
 CreateThread(function()
-
--- // Ikke sikker om dette er reelt for øyeblikket.
--- while not lib or not lib.addKeybind do Wait(100) end
-
+        
     lib.addKeybind({
         name = 'slipp_sykkel',
         description = 'Slipp Sykkel',
@@ -41,7 +38,20 @@ CreateThread(function()
             end
         end
     })
+end)
 
+CreateThread(function()
+    for _, model in pairs(Config.Bikes) do
+        exports.ox_target:addModel(model, {
+            {
+                name = 'plukkopp_sykkel',
+                label = 'Pick bicycle',
+                icon = 'fa-solid fa-bicycle',
+                event = 'hbd:carrybike',
+                distance = 2.0,
+            }
+        })
+    end
 end)
 
 RegisterNetEvent('hbd:carrybike', function()

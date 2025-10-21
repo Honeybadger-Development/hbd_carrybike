@@ -46,7 +46,7 @@ end)
 
 RegisterNetEvent('hbd:carrybike', function()
     local ped = cache.ped
-    local coords = GetEntityCoords(ped)
+    local coords = GetEntityCoords(cache.ped)
     local vehicle = GetClosestVehicle(coords, 5.0, 0, 71)
 
     if not vehicle or vehicle == 0 then

@@ -1,4 +1,4 @@
-local bikes = Config.BikeModels
+local bikes = Config.Bikes
 local carryingBike = false
 local carriedBike = nil
 local carryThreadActive = false

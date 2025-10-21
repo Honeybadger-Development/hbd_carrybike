@@ -22,5 +22,6 @@ server_script {
 
 dependencies {
     'ox_lib',
+    'ox_target',
     'lation_ui'
 }

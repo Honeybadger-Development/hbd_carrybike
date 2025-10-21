@@ -2,8 +2,8 @@
 Carry Bike Resource by Honeybadger Development
 
 # Dependencies
-[Lation UI](https://lationscripts.com/product/modern-ui)
-[ox_target](https://github.com/CommunityOx/ox_target)
+- [Lation UI](https://lationscripts.com/product/modern-ui)
+- [ox_target](https://github.com/CommunityOx/ox_target)
 
 # Discord
 

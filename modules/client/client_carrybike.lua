@@ -17,7 +17,7 @@ CreateThread(function()
         
     lib.addKeybind({
         name = 'slipp_sykkel',
-        description = 'Slipp Sykkel',
+        description = 'Drop Bicycle',
         defaultKey = 'G',
         onPressed = function()
             if carryingBike and carriedBike and DoesEntityExist(carriedBike) and IsEntityAttached(carriedBike) then
@@ -30,8 +30,8 @@ CreateThread(function()
                 carryThreadActive = false
 
                 exports.lation_ui:notify({
-                    title = 'Sykkel',
-                    description = 'Du slapp sykkelen.',
+                    title = 'Bicycle Carrying',
+                    description = 'You released the bicycle.',
                     type = 'inform'
                 })
             end
@@ -61,16 +61,16 @@ RegisterNetEvent('hbd:carrybike', function()
 
     if not vehicle or vehicle == 0 then
         return exports.lation_ui:notify({
-            title = 'Bike Carrying',
-            description = 'No bike nearby!',
+            title = 'Bicycle Carrying',
+            description = 'No bicycle nearby!',
             type = 'error'
         })
     end
 
     if not BikeCheck(vehicle) then
         return exports.lation_ui:notify({
-            title = 'Bike Carrying',
-            description = 'You can not pick up this bike.',
+            title = 'Bicycle Carrying',
+            description = 'You can not pick up this bicycle.',
             type = 'error'
         })
     end
@@ -82,8 +82,8 @@ RegisterNetEvent('hbd:carrybike', function()
     carryThreadActive = true
 
     exports.lation_ui:notify({
-        title = 'Bike Carrying',
-        description = 'Press [G] to release the bike.',
+        title = 'Bicycle Carrying',
+        description = 'Press [G] to release the bicycle.',
         type = 'error'
     })
 

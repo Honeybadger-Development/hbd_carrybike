@@ -1,6 +1,6 @@
 Config = {}
 
-Config.BikeModels = {
+Config.Bikes = {
     `bmx`,
     `cruiser`,
     `scorcher`,

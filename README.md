@@ -23,7 +23,7 @@ qbx_radialmenu
 ```lua
 {
     id = 'pickupbike',
-    icon = 'car',
+    icon = 'bicycle',
     label = 'Pick Up Bike',
     event = 'hbd:carrybike',
 },

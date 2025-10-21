@@ -70,7 +70,7 @@ RegisterNetEvent('hbd:carrybike', function()
     if not BikeCheck(vehicle) then
         return exports.lation_ui:notify({
             title = 'Bike Carrying',
-            description = 'You can\n't pick up this bike.',
+            description = 'You can not pick up this bike.',
             type = 'error'
         })
     end

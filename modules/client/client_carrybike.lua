@@ -13,7 +13,6 @@ function BikeCheck(bike)
     return false
 end
 
-
 CreateThread(function()
         
     lib.addKeybind({
@@ -38,6 +37,7 @@ CreateThread(function()
             end
         end
     })
+        
 end)
 
 CreateThread(function()
@@ -45,7 +45,7 @@ CreateThread(function()
         exports.ox_target:addModel(model, {
             {
                 name = 'plukkopp_sykkel',
-                label = 'Pick bicycle',
+                label = 'Pick up Bicycle',
                 icon = 'fa-solid fa-bicycle',
                 event = 'hbd:carrybike',
                 distance = 2.0,
@@ -61,21 +61,20 @@ RegisterNetEvent('hbd:carrybike', function()
 
     if not vehicle or vehicle == 0 then
         return exports.lation_ui:notify({
-            title = 'Feil',
-            description = 'Ingen sykkel i nærheten!',
+            title = 'Bike Carrying',
+            description = 'No bike nearby!',
             type = 'error'
         })
     end
 
     if not BikeCheck(vehicle) then
         return exports.lation_ui:notify({
-            title = 'Feil',
-            description = 'Du kan ikke plukke opp denne sykkelen!', -- Legg til i shared/config.lua
+            title = 'Bike Carrying',
+            description = 'You can\n't pick up this bike.',
             type = 'error'
         })
     end
 
-    -- Attach bike
     local bone = 24818
     AttachEntityToEntity(vehicle, ped, bone, 0.18, -0.20, 0.40, 0.0, 0.0, 0.0, true, true, false, true, 1, true)
     carriedBike = vehicle
@@ -83,17 +82,15 @@ RegisterNetEvent('hbd:carrybike', function()
     carryThreadActive = true
 
     exports.lation_ui:notify({
-        title = 'Bæring av sykkel',
-        description = 'Trykk [G] for å slippe sykkelen.',
+        title = 'Bike Carrying',
+        description = 'Press [G] to release the bike.',
         type = 'error'
     })
 
-    -- Play carry animation
     RequestAnimDict("move_p_m_zero_rucksack")
     while not HasAnimDictLoaded("move_p_m_zero_rucksack") do Wait(0) end
     TaskPlayAnim(ped, "move_p_m_zero_rucksack", "idle", 2.0, 2.0, -1, 51, 0, false, false, false)
 
-    -- Carry loop
     CreateThread(function()
         while carryThreadActive do
             Wait(1000)

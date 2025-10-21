@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'Greve | Honeybadger Development - discord.gg/qGa4ngpgTg'
 description 'Carry Bike'
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts {
     '@ox_lib/init.lua',
